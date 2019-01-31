@@ -9,3 +9,9 @@ $config->setMinDownloadLevel(2);
 $config->useGeshi();
 set_time_limit(0);
 $config->expandTabsBy(8);
+
+
+$config->setBlockRobots()
+
+# more cfg options from env
+if (getenv(TRUST_SERVER_CERT)) $config->setTrustServerCert();

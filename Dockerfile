@@ -11,4 +11,4 @@ RUN sed -i 's/--trust-server-cert/--trust-server-cert=cn-mismatch,unknown-ca,not
 
 EXPOSE 80
 VOLUME /var/www/html/include
-# CMD php -S 0.0.0.0:80
+CMD php -S 0.0.0.0:80
