@@ -15,4 +15,7 @@ Example Docker Compose file:
             - "8003:80"
         environment:
             - repository=svn://10.0.1.20/main
+            - user=svnuser_with_read_rights
+            - password=password_of_svnuser
+            - TRUST_SERVER_CERT=true
         restart: always
