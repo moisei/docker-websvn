@@ -7,7 +7,7 @@ RUN svn export --username guest --password "" http://websvn.tigris.org/svn/websv
 WORKDIR /var/www/html
 COPY config.php /var/www/html/include
 
-RUN sed -i 's/--trust-server-cert/--trust-server-cert=cn-mismatch,unknown-ca,not-yet-valid/' 'include/configclass.php' 
+RUN sed -i 's/--trust-server-cert/--trust-server-cert-failures=cn-mismatch,unknown-ca,not-yet-valid/' 'include/configclass.php'
 
 EXPOSE 80
 VOLUME /var/www/html/include

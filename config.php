@@ -11,7 +11,7 @@ set_time_limit(0);
 $config->expandTabsBy(8);
 
 
-$config->setBlockRobots()
+$config->setBlockRobots();
 
 # more cfg options from env
-if (getenv(TRUST_SERVER_CERT)) $config->setTrustServerCert();
+if (getenv('TRUST_SERVER_CERT')) $config->setTrustServerCert();
